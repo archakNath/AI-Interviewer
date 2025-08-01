@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // // Initialize Gemini with your API key
-const genAI = new GoogleGenerativeAI("AIzaSyCbOf1ZfEu6_ovICOxf35pgJQBJljTCP6s");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 export const generateInterviewQuestions = async (resumeContent, duration) => {
     try {
